@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=flex, initial-scale=5">
+	<title></title>
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Alfatir Azizan | Catatan & Karya</title>
+</head>
+<body>
+
+<header>
+  <h1>Alfatir Azizan</h1>
+
+  <!-- FOTO -->
+  <div class="foto-container">
+    <img src="foto.png" alt="Foto Profil" class="foto">
+  </div>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#karya">Karya</a>
+    <a href="#proses">Proses</a>
+    <a href="#dokumentasi">Dokumentasi</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <!-- SEARCH BAR -->
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Cari sesuatu..." 
+    onkeyup="searchContent()"
+  >
+</header>
+
+<section class="hero">
+  <p id="quote"></p>
+</section>
+
+<section id="tentang" class="section">
+  <h2>Tentang Saya</h2>
+  <div class="card">
+    Saya adalah seorang pelajar SMK jurusan TKJT yang tertarik pada berbagai hal—mulai dari teknologi, musik, sastra, hingga desain.
+    Saya tidak mengklaim diri sebagai ahli, melainkan seseorang yang terus mencoba memahami dunia dengan cara saya sendiri.
+  </div>
+  <div class="card">
+    Saya juga aktif dalam organisasi seperti OSIS dan Pramuka, serta ikut berpartisipasi dalam berbagai kegiatan.
+  </div>
+</section>
+
+<section id="karya" class="section">
+  <h2>Karya & Minat</h2>
+  <div class="card">Menulis cerita dan eksplorasi ide-ide filosofis</div>
+  <div class="card">Menikmati dan menganalisis musik (rock, post-punk, dll)</div>
+  <div class="card">Desain grafis sederhana (eksperimen visual)</div>
+  <div class="card">
+    Translasi manga dari Bahasa Inggris ke Bahasa Indonesia sebagai latihan pemahaman bahasa dan adaptasi konteks
+  </div>
+  <div class="card">
+    Saya memiliki pemahaman Bahasa Inggris yang cukup baik, terutama dalam membaca dan memahami konteks tulisan.
+  </div>
+  <div class="card">Memasak sebagai bentuk eksplorasi rasa dan kreativitas</div>
+</section>
+
+<section id="proses" class="section">
+  <h2>Proses Belajar</h2>
+  <div class="card">
+    Saya sedang belajar dasar-dasar IT seperti Linux, jaringan, dan pembuatan website sederhana.
+    Semua masih dalam tahap eksplorasi dan percobaan.
+  </div>
+  <div class="card">
+    Bagi saya, belajar bukan tentang cepat mahir, tapi tentang memahami sedikit demi sedikit.
+  </div>
+</section>
+
+<section id="dokumentasi" class="section">
+  <h2>Dokumentasi Project</h2>
+
+  <div class="card">
+    <a href="#" target="_blank">
+      Project 1 - Website sederhana (HTML, CSS, JS dasar)
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="#" target="_blank">
+      Project 2 - Eksperimen Linux (install, konfigurasi, dll)
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://mangadex.org/user/ed7a7a6a-308f-4bc7-9662-910fa43f8e66" target="_blank">
+      Project 3 - Translasi manga (latihan bahasa & editing)
+    </a>
+  </div>
+</section>
+
+<section id="kontak" class="section">
+  <h2>Kontak</h2>
+  <div class="card">
+    Email: <a href="mailto:alfatir.azizan.id@gmail.com">alfatir.azizan.id@gmail.com</a> <br>
+    YouTube: <a href="https://youtube.com/@alfatirazizanid?si=HPrvgLjo9W9ZnRxb">@AlfatirAzizanid</a>
+    Instagram: <a href="https://www.instagram.com/alfatir_azizan2008?igsh=MWQ2Yzdidm1odWhhdg==">alfatir_azizan2008</a>
+  </div>
+</section>
+
+<footer>
+  “Saya tidak sedang menjadi siapa-siapa, saya hanya sedang mengejar masa depan.”
+</footer>
+
+<script>
+  const quotes = [
+    "Saya tidak sedang mengejar dunia, saya sedang memahaminya.",
+    "Belajar bukan untuk menjadi hebat, tapi untuk tidak bodoh.",
+    "Saya hanya seorang pelajar yang penasaran.",
+    "Tidak semua hal harus saya kuasai, tapi ingin saya pahami."
+  ];
+
+  let i = 0;
+  const quoteEl = document.getElementById("quote");
+
+  function changeQuote() {
+    quoteEl.classList.remove("show");
+
+    setTimeout(() => {
+      quoteEl.textContent = quotes[i];
+      quoteEl.classList.add("show");
+      i = (i + 1) % quotes.length;
+    }, 500);
+  }
+
+  setInterval(changeQuote, 4000);
+  changeQuote();
+
+  function searchContent() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+
+      if (text.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<hr>
+	<a href="INDEX.html">kembali ke home page</a>
+</body>
+</html>
